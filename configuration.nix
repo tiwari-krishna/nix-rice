@@ -21,8 +21,8 @@
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
-  networking.useDHCP = false;
-  networking.interfaces.enp0s3.useDHCP = true;
+  # networking.useDHCP = false;
+  # networking.interfaces.enp0s3.useDHCP = true;
 
   networking.hostName = "calc"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -39,7 +39,9 @@
 
   # Enable kde plasma desktop environment
   # services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.startx.enable = true;
   # services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.windowManager.awesome.enable = true;
   services.xserver.autorun = false;
   services.xserver.videoDrivers = [ "intel" ];
 
@@ -64,11 +66,12 @@
   };
 
   # List packages installed in system profile. To search, run:
+  nixpkgs.config.allowUnfree = true;
   # $ nix search wget
    environment.systemPackages = with pkgs; [
-     vim neovim links2 emacs mpd mpc_cli mpv ncpcpp zathura youtube-dl sxiv xwallpaper xorg.xmodmap psmisc xorg.xinit xorg.xev xcompmgr xorg.xsetroot xorg.xmessage xorg.xbacklight xclip ranger ueberzug thunar fira fira-mono fira-code fira-code-symbols hack-font noto-fonts noto-fonts-emoji noto-fonts-extra clipgrab minitube pandoc starship pavucontrol pulsemixer pamixer qt5ct lxappearance papirus-icon-theme doas neofetch gimp pinta libreoffice gcc xorg.utilmacros bash-completion dash liberation_ttf roboto roboto-mono roboto-slab font-manager dmenu st alacritty rofi rofi-emoji qbittorrent texlive.combined.scheme-basic emacs27Packages.all-the-icons htop gotop figlet unrar unzip zip scid haskellPackages.pandoc-crossref bibata-cursors libsForQt5.breeze-gtk imagemagick ffmpeg groff fuse fuse-common fuse3 
-     wget curl git awesome i3-gaps i3blocks-gaps dunst libvterm
-     firefox brave qutebrowser google-fonts geany
+     vim neovim links2 emacs mpd mpc_cli mpv ncmpcpp zathura youtube-dl sxiv xwallpaper xorg.xmodmap psmisc xorg.xinit xorg.xev xcompmgr xorg.xsetroot xorg.xmessage xorg.xbacklight xclip ranger ueberzug xfce.thunar fira fira-mono fira-code fira-code-symbols hack-font noto-fonts noto-fonts-emoji noto-fonts-extra clipgrab minitube pandoc starship pavucontrol pulsemixer pamixer qt5ct lxappearance papirus-icon-theme neofetch gimp pinta gcc xorg.utilmacros bash-completion dash liberation_ttf roboto roboto-mono roboto-slab dmenu st alacritty rofi rofi-emoji qbittorrent texlive.combined.scheme-basic emacs27Packages.all-the-icons htop gotop figlet unrar unzip zip scid haskellPackages.pandoc-crossref bibata-cursors libsForQt5.breeze-gtk imagemagick ffmpeg groff fuse fuse-common fuse3 
+     wget curl git dunst libvterm xorg.xorgserver xorg.xf86inputsynaptics xorg.xf86inputlibinput xorg.xf86inputevdev xorg.xf86videointel
+     brave qutebrowser firefox google-fonts geany haskellPackages.xmonad haskellPackages.xmonad-dbus haskellPackages.xmonad-utils haskellPackages.xmonad-contrib haskellPackages.xmobar
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
