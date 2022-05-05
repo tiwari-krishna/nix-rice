@@ -66,12 +66,12 @@
   };
 
   # List packages installed in system profile. To search, run:
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
   # $ nix search wget
    environment.systemPackages = with pkgs; [
-     vim neovim links2 emacs mpd mpc_cli mpv ncmpcpp zathura youtube-dl sxiv xwallpaper xorg.xmodmap psmisc xorg.xinit xorg.xev xcompmgr xorg.xsetroot xorg.xmessage xorg.xbacklight xclip ranger ueberzug xfce.thunar fira fira-mono fira-code fira-code-symbols hack-font noto-fonts noto-fonts-emoji noto-fonts-extra clipgrab minitube pandoc starship pavucontrol pulsemixer pamixer qt5ct lxappearance papirus-icon-theme neofetch gimp pinta gcc xorg.utilmacros bash-completion dash liberation_ttf roboto roboto-mono roboto-slab dmenu st alacritty rofi rofi-emoji qbittorrent texlive.combined.scheme-basic emacs27Packages.all-the-icons htop gotop figlet unrar unzip zip scid haskellPackages.pandoc-crossref bibata-cursors solarc-gtk-theme imagemagick ffmpeg groff fuse fuse-common fuse3 
-     wget curl git dunst libvterm xorg.xorgserver xorg.xf86inputsynaptics xorg.xf86inputlibinput xorg.xf86inputevdev xorg.xf86videointel
-     brave qutebrowser firefox google-fonts geany haskellPackages.xmonad haskellPackages.xmonad-dbus haskellPackages.xmonad-utils haskellPackages.xmonad-contrib haskellPackages.xmobar gnumake xorg.libxft xorg.libXinerama xorg.libx11 xorg.libxcb harfbuzz
+     vim neovim links2 mpd mpc_cli mpv ncmpcpp zathura youtube-dl sxiv xwallpaper xorg.xmodmap psmisc xorg.xinit xorg.xev xcompmgr xorg.xsetroot xorg.xmessage xorg.xbacklight xclip ranger ueberzug pcmanfm fira fira-mono fira-code fira-code-symbols hack-font noto-fonts noto-fonts-emoji noto-fonts-extra clipgrab minitube pandoc starship pavucontrol pulsemixer pamixer qt5ct lxappearance papirus-icon-theme neofetch gimp pinta gcc xorg.utilmacros bash-completion liberation_ttf dmenu alacritty rofi rofi-emoji qbittorrent texlive.combined.scheme-basic htop gotop figlet unzip zip bibata-cursors arc-theme ffmpeg groff fuse fuse-common fuse3 
+     wget curl git dunst xorg.xorgserver xorg.xf86inputsynaptics xorg.xf86inputlibinput xorg.xf86inputevdev xorg.xf86videointel maim newsboat neomutt galculator
+     brave qutebrowser firefox simplescreenrecorder
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
