@@ -23,13 +23,8 @@
       fsType = "ext4";
     };
 
-  fileSystems."/home/krishna/Data/Media" =
-    { device = "/dev/disk/by-uuid/c316056c-0b8b-46e1-bc12-47fe40f30ebb";
-      fsType = "ext4";
-    };
-
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/81f56c1b-8281-47d2-969b-f24b3c75511c"; }
+    [ { device = "/dev/disk/by-uuid/30e5995f-22e2-4058-97e0-c9a09775d3f0"; }
     ];
 
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

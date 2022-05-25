@@ -41,7 +41,7 @@
   # services.xserver.displayManager.sddm.enable = true;
   services.xserver.displayManager.startx.enable = true;
   # services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.windowManager.awesome.enable = true;
+  services.xserver.windowManager.i3.package = pkgs.i3-gaps;
   services.xserver.autorun = false;
   services.xserver.videoDrivers = [ "intel" ];
 
@@ -69,9 +69,8 @@
   # nixpkgs.config.allowUnfree = true;
   # $ nix search wget
    environment.systemPackages = with pkgs; [
-     vim neovim links2 mpd mpc_cli mpv ncmpcpp zathura youtube-dl sxiv xwallpaper xorg.xmodmap psmisc xorg.xinit xorg.xev xcompmgr xorg.xsetroot xorg.xmessage xorg.xbacklight xclip ranger ueberzug pcmanfm fira fira-mono fira-code fira-code-symbols hack-font noto-fonts noto-fonts-emoji noto-fonts-extra clipgrab minitube pandoc starship pavucontrol pulsemixer pamixer qt5ct lxappearance papirus-icon-theme neofetch gimp pinta gcc xorg.utilmacros bash-completion liberation_ttf dmenu alacritty rofi rofi-emoji qbittorrent texlive.combined.scheme-basic htop gotop figlet unzip zip bibata-cursors arc-theme ffmpeg groff fuse fuse-common fuse3 
-     wget curl git dunst xorg.xorgserver xorg.xf86inputsynaptics xorg.xf86inputlibinput xorg.xf86inputevdev xorg.xf86videointel maim newsboat neomutt galculator
-     brave qutebrowser firefox simplescreenrecorder
+     unstable.neovim mpd mpc_cli mpv ncmpcpp zathura youtube-dl sxiv xwallpaper xorg.xmodmap psmisc xorg.xinit xorg.xev xcompmgr xorg.xsetroot xorg.xmessage xorg.xbacklight xclip ranger ueberzug pcmanfm jetbrains-mono fira fira-mono fira-code fira-code-symbols hack-font noto-fonts noto-fonts-emoji noto-fonts-extra nerdfonts clipgrab minitube pandoc starship pavucontrol pulsemixer lxappearance papirus-icon-theme neofetch gimp mypaint xorg.utilmacros bash-completion liberation_ttf dmenu alacritty rofi rofi-emoji qbittorrent texlive.combined.scheme-basic htop btop figlet unzip zip bibata-cursors arc-theme ffmpeg groff fuse fuse-common fuse3 
+     wget curl git dunst xorg.xorgserver xorg.xf86inputsynaptics xorg.xf86inputlibinput xorg.xf86inputevdev xorg.xf86videointel maim newsboat claws-mail galculator brave qutebrowser firefox simplescreenrecorder
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -99,6 +98,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "21.11"; # Did you read the comment?
+  system.stateVersion = "22.05"; # Did you read the comment?
 
 }
